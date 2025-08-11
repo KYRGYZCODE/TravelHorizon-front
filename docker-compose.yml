@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  travel-horizon:
+    build: .
+    container_name: travel-horizon-front
+    ports:
+      - "3099:3099"
+    environment:
+      - NODE_ENV=production
+      - PORT=3099
+    restart: unless-stopped
